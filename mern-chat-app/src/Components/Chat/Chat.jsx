@@ -5,6 +5,8 @@ import { Avatar } from '@mui/material';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
+import InsertEmoticonOutlinedIcon from '@mui/icons-material/InsertEmoticonOutlined';
+import MicOutlinedIcon from '@mui/icons-material/MicOutlined';
 
 function Chat() {
   return (
@@ -27,12 +29,38 @@ function Chat() {
              <IconButton>
                <MoreVertIcon />
              </IconButton>
+            </div>           
+        </div>
+                    
+        <div className='chatBody'>
 
-
-            </div>            
+            <p className='chatMessage'>     
+                <span className='chatName'>Username</span>
+                Chat message
+                <span className='chatTimestamp'>
+                    {new Date().toUTCString()}
+                </span>
+            </p>
             
+            <p className='chatMessage chatReceiver'>     
+                <span className='chatName'>Username</span>
+                Chat message
+                <span className='chatTimestamp'>
+                    {new Date().toUTCString()}
+                </span>
+            </p>
 
         </div>
+
+        <div className='chatFooter'>
+            <InsertEmoticonOutlinedIcon />
+            <form>
+                <input placeholder='Type a message' type='text' />
+                <button type='submit'>Send a message</button>
+            </form>
+                <MicOutlinedIcon />
+        </div>
+
     </div>
   )
 }
