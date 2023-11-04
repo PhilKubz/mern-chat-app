@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import Sidebar from './Components/Sidebar/Sidebar';
-import Chat from './Components/Chat/Chat';
+import './../../App.css';
+import Sidebar from './../Sidebar/Sidebar';
+import Chat from './../Chat/Chat';
 
-function App() {
+function MainApplication () {
   const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 768);
 
   const toggleSidebar = () => {
@@ -32,7 +32,4 @@ function App() {
   );
 }
 
-export default App;
-
-
-
+export default MainApplication;
