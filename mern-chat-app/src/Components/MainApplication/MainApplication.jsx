@@ -3,7 +3,7 @@ import './../../App.css';
 import Sidebar from './../Sidebar/Sidebar';
 import Chat from './../Chat/Chat';
 
-function MainApplication () {
+function MainApplication({ messages }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 768);
 
   const toggleSidebar = () => {
@@ -26,7 +26,7 @@ function MainApplication () {
     <div className="app">
       <div className={`appBody ${isSidebarOpen ? '' : 'collapsed'}`}>
         <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-        <Chat />
+        <Chat messages={messages} />
       </div>
     </div>
   );

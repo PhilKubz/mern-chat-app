@@ -10,10 +10,14 @@ import SidebarChat from '../SidebarChat/SidebarChat';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function Sidebar({ isSidebarOpen, toggleSidebar }) {
+  const handleToggleSidebar = () => {
+    toggleSidebar();
+  };
+
   return (
     <div className={isSidebarOpen ? 'sidebar' : 'sidebar collapsed'}>
-      <div className="toggleButtonContainer">
-        <IconButton className="toggleButton" onClick={toggleSidebar}>
+      <div className="toggleButtonContainer" onClick={handleToggleSidebar}>
+        <IconButton className="toggleButton">
           <ArrowBackIosNewIcon />
         </IconButton>
       </div>

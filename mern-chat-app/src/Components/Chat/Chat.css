@@ -44,10 +44,11 @@
     border-radius: 10px;
     background-color: #ffffff;
     margin-bottom: 30px;
+    margin-left: auto;
 }
 
 .chatReceiver {
-    margin-left: auto;
+    margin-left: 0;
     background-color: #dcf8c6;
 }
 
